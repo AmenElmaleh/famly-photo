@@ -1,0 +1,260 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    
+    
+}
+nav{
+    width: 1423px;
+
+    height: 1000px;
+    background: white;
+    display: inline-flex;
+    align-items: center;
+   
+  
+}
+nav div{
+    display: inline-block;
+}
+.right{
+    padding-top: 15px;
+    width: 800px;
+  text-align: left;
+  text-overflow: ellipsis;
+  text-indent: 20px;
+   height: 100%;
+   position: relative;
+    word-spacing: 5px;
+    word-break: break-all;
+    padding-bottom: 15px;
+    color: black;
+    display: block;
+    overflow: hidden;
+    background: rgb(82, 185, 233);
+   
+    
+}
+.right::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background: white;
+    width: 100%;
+    height: 100%;
+    transform: skew(30deg);
+    top: 0;
+    left: 0;
+}
+.opa{
+    position: absolute;
+    margin: auto;
+    z-index: 2;
+    animation: opaa 2s ease alternate forwards;
+    left: 0%;
+    
+    
+}
+@keyframes opaa{
+    0%{
+        position: absolute;
+        left: -50%;
+        opacity: 0.5;
+        transition-delay: 1s;
+    }
+    100%{
+        left: 0%;
+    }
+
+}
+.logo{
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgba(0, 101, 148, 0.541);
+   
+   
+    font-size: 30px;
+}
+.logo:hover{
+    opacity: 0.7;
+
+}
+.right h1{
+    font-size: 20px;
+}
+.right h3{
+    font-size: 15px;
+    color: rgb(168, 168, 168);
+}
+.right span{
+    color: rgb(82, 185, 233);
+    border-bottom: 3px dashed rgb(82, 185, 233);
+    padding-bottom: 5px;
+}
+
+.start{
+    line-height: 120px;
+    margin-left: 20px;
+    width: 50%;
+    height: 20%;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border: 0;
+    background: rgb(82, 185, 233);
+    font-size: 15px;
+}
+.start:hover{
+    opacity: 0.8;
+}
+.websites{
+    margin: 50px 120px;
+}
+.websites a{
+    display: inline-block;
+    text-indent: 0;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 25px;
+    color: rgb(82, 185, 233);
+    text-decoration: none;
+    background: rgb(216, 216, 216);
+}
+.left{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background: url(img/5050.png);
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 125%;
+    z-index: 1;
+  
+}
+.left::after{
+    animation: back 7s alternate forwards ease;
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 20%;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    background: rgba(82, 185, 233, 0.541);
+}
+.left::before{
+    animation: back 6s  forwards alternate ease;
+    position: absolute;
+    transition-duration: 4s;
+    z-index: 2;
+    content: "";
+    width: 0%;
+    height: 0%;
+    right: 0;
+    top: 0;
+    background: rgba(0, 101, 148, 0.541);
+}
+@keyframes back{
+    0%{
+        width: 0;
+        height: 0;
+        backdrop-filter: blur(2.5px);
+    }
+    25%{
+        width: 100%;
+        height: 50%;
+        backdrop-filter: blur(5px);
+    }
+
+    50%{
+        width: 100%;
+        height: 50%;
+        backdrop-filter: blur(10px);
+    }
+    100%{
+        width: 5%;
+        height: 50%;
+        backdrop-filter: blur(15px);
+    }
+}
+
+.top-left{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgb(82, 185, 233);
+    align-items: center;
+    overflow: hidden;
+    position: sticky;
+    justify-content: space-between;
+    
+}
+.box{
+    width: 20em;
+    height: 20em;
+    background: white;
+    display: inline-block;
+    padding: 10px;
+    margin: 15px;
+    transition: .5s ease;
+}
+.box:hover{
+    transform: scale(1.1);
+}
+.box-img img{
+    width: 100%;
+    height: 100%;
+    
+    transition: 0.4s  ease ;
+
+    
+    
+}
+.box-img img:hover{
+    transform: scale(1.1) rotate(5deg) ;
+}
+
+.box-img{
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgb(187, 187, 187);
+    overflow: hidden;
+}
+
+.box-img::after{
+    content: "Hover ME !";
+ 
+    
+    
+    backdrop-filter: blur(25px);
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    top: 0%;
+    left: 0;
+
+
+
+    
+
+}
+
+
+
+.box-img:hover::after{
+    opacity: 0;
+    
+    
+}
+
+
+
